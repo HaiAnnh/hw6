@@ -3,57 +3,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <title> Countdown to Happy New Year's</title>
-    <link rel="stylesheet" href="">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background-color: #2c3e50;
-    color: white;
-}
-.countdown {
-    font-size: 50px;
-    font-weight: bold;
-}
-.new-year-message {
-    font-size: 30px;
-    margin-top: 20px;
-    display: none;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
 <body>
 
-    <h1>Countdown to New Year's</h1>
-    <div id="countdown" class="countdown"></div>
-    <div id="NewYearMessage" class="new-year-message">Happy New Year!</div>
-
-<!-- Java script to countdown -->
-    <script>
-        // Set the target date for the countdown (January 1, 2025 at midnight)
-        const targetDate = new Date('January 1, 2025 00:00:00').getTime();
-
-        // Update the countdown every second
-        const countdownTimer = setInterval(function() {
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
-
-            // Calculate time components
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            // Display the countdown
-            document.getElementById("countdown").innerHTML= `${days}d ${hours}h ${minutes}m ${seconds}`;
-
-            // If the countdown reaches zero, show the New Year message
-            if (timeLeft < 0) {
-                clearInterval(countdownTimer);
-                document.getElementById("countdown").style.display = "none";
-                document.getElementById("NewYearMessage").style.display = "block";
-            }
-        }, interval);
-    </script>
+    <h1>Countdown Timer</h1>
+    <div class="countdown-container">
+        <div class="countdown-el days-c">
+          <p class="big-text" id="days">0</p>
+           <span id="days">days</span> 
+        </div>
+        <div class="countdown-el hours-c">
+           <p class="big-text" id="hours">0</p>
+            <span>hours</span>
+        </div>
+        <div class="countdown-el mins-c">
+             <p class="big-text" id="mins">0</p>
+             <span>mins</span>
+        </div>
+          <div class="countdown-el second-c">
+             <p class="big-text" id="seconds">0</p>
+         <span>seconds</span>
+        </div>
+    </div>
 </body>
 </html>
