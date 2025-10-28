@@ -1,0 +1,45 @@
+body {
+    background-image: url(anh.jpg);
+    font-family: 'Holtwood One SC', serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+h1 {
+    font-weight: lighter;
+    font-size: 6rem;
+    margin-top: -300px;
+    color:rgb(226, 245, 231);
+}
+.countdown-container {
+    display: flex;
+    flex-wrap: flex;
+    margin-bottom: -100px;
+    position: relative;
+}
+.big-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+    margin-top: 100px;
+    padding-bottom: 0px;
+    color: rgb(231, 212, 212);
+}
+.countdown-container span{
+    font-size: 1.5rem;
+    margin-top: 1000px;
+    color: rgb(223, 194, 194);
+}
+.countdown span{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
