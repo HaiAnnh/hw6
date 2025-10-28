@@ -4,6 +4,24 @@
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <title> Countdown to Happy New Year's</title>
     <link rel="stylesheet" href="">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #2c3e50;
+    color: white;
+}
+.countdown {
+    font-size: 50px;
+    font-weight: bold;
+}
+.new-year-message {
+    font-size: 30px;
+    margin-top: 20px;
+    display: none;
+}
+    </style>
 <body>
 
     <h1>Countdown to New Year's</h1>
